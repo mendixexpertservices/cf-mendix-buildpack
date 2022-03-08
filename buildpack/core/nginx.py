@@ -237,7 +237,7 @@ class Location:
         # General location parameters
         self.path = None
         self.index = None
-        self.proxy_buffering_enabled = False
+        self.proxy_buffering_enabled = True
         self.proxy_intercept_errors_enabled = False
 
         # Access restriction parameters
