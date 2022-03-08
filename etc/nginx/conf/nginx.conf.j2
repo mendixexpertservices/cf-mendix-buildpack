@@ -76,6 +76,8 @@ http {
         proxy_request_buffering off;
         {% endif %}
         proxy_intercept_errors {{ "on" if location.proxy_intercept_errors_enabled else "off" }};
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
         satisfy {{ location.satisfy }};
         {% if location.ipfilter_ips is not none %}
         {% for ip in location.ipfilter_ips %}
